@@ -14,9 +14,9 @@ To write a program to prepare EMI calculator using function without return type 
 5.	Display the result.
 6.	Stop the program.
 
-## PROGRA#
+## PROGRAM
 ```
-include <stdio.h>
+#include <stdio.h>
 #include <math.h>
 void calculateEMI(float principal, float rate, int months)
 {
@@ -157,7 +157,7 @@ To write a C Program to count total number of positive elements in an array.
 1.	Start the program.
 2.	Read a variable.
 3.	Read the array values n number of times.
-4.	If the array value can be divided by 2 then increment count by 1.
+4.	If the element is greater than 0
 5.	Display result.
 6.	Stop the program.
 
@@ -218,32 +218,33 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
 ## Program:
 ```
 #include <stdio.h>
+
 int main() {
-Thus, the program to replace all even elements with 'E' in one dimensional array was
-verified successfully.
-int n;
-printf("Enter the number of elements in the array: ");
-scanf("%d", &n);
-int arr[n];
-printf("Enter the elements of the array:\n");
-for (int i = 0; i < n; i++) {
-scanf("%d", &arr[i]);
-}
-for (int i = 0; i < n; i++) {
-if (arr[i] % 2 == 0) {
-arr[i] = 'E';
-}
-}
-printf("Updated array:\n");
-for (int i = 0; i < n; i++) {
-if (arr[i] == 'E') {
-printf("'E' ");
-} else {
-printf("%d ", arr[i]);
-}
-}
-printf("\n");
-return 0;
+    int n;
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter the elements of the array:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            arr[i] = 'E'; 
+        }
+    }
+
+    printf("Updated array:\n");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] == 'E') {
+            printf("'E' ");
+        } else {
+            printf("%d ", arr[i]);
+        }
+    }
+    printf("\n");
+    return 0;
 }
 ```
 ## Output:
